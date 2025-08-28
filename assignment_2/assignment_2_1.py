@@ -63,5 +63,5 @@ height, width, channels, emptyPictureArray = print_image_information("assignment
 #hsv(cv2.imread("assignment_2/lena-1.png"))
 #hue_shifted(cv2.imread("assignment_2/lena-1.png"), emptyPictureArray, 50)
 #smoothing(cv2.imread("assignment_2/lena-1.png"))
-rotation(cv2.imread("assignment_2/lena-1.png"), cv2.ROTATE_90_CLOCKWISE)
+#rotation(cv2.imread("assignment_2/lena-1.png"), cv2.ROTATE_90_CLOCKWISE)
 rotation(cv2.imread("assignment_2/lena-1.png"), cv2.ROTATE_180)

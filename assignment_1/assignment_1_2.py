@@ -1,6 +1,8 @@
+import os
 import cv2
 
-# Open the default camera
+os.environ['OPENCV_VIDEOIO_PRIORITY_GSTREAMER'] = '0'
+os.environ['OPENCV_VIDEOIO_DEBUG'] = '1'
 cam = cv2.VideoCapture(0)
 
 # Get the default frame width and height and also the fps
