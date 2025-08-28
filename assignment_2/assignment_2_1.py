@@ -65,3 +65,4 @@ height, width, channels, emptyPictureArray = print_image_information("assignment
 #smoothing(cv2.imread("assignment_2/lena-1.png"))
 #rotation(cv2.imread("assignment_2/lena-1.png"), cv2.ROTATE_90_CLOCKWISE)
 rotation(cv2.imread("assignment_2/lena-1.png"), cv2.ROTATE_180)
+#git test
