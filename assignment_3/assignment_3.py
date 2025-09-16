@@ -46,7 +46,7 @@ def resize(image, scale_factor:int, up_or_down:str):
    print("test")
 
 #sobel_edge_detection(img)
-#canny_edge_detection(img, 100, 200)
+canny_edge_detection(img, 50, 50)
 #template_match(image, template)
-resize(img, 2, "up")
-resize(img, 2, "down")
+#resize(img, 2, "up")
+#resize(img, 2, "down")
