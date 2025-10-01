@@ -3,13 +3,13 @@ import cv2 as cv
 from matplotlib import pyplot as plt
 
 MIN_MATCH_COUNT = 10
-#MAX_FEATURES = 10
+#MAX_FEATURES = 10 did not work assumed you meant min match count here
 GOOD_MATCH_PERCENT = 0.7
 
 img1 = cv.imread('assignment_4/align_this.jpg', cv.IMREAD_GRAYSCALE)          # queryImage
 img2 = cv.imread('assignment_4/reference_img.png', cv.IMREAD_GRAYSCALE) # trainImage
 
-# Initiate SIFT detector with max features
+# Initiate SIFT detector
 sift = cv.SIFT_create()
 
 # find the keypoints and descriptors with SIFT
@@ -37,10 +37,10 @@ if len(good) > MIN_MATCH_COUNT:
     M, mask = cv.findHomography(src_pts, dst_pts, cv.RANSAC, 5.0)
     matchesMask = mask.ravel().tolist()
  
-    #h, w = img1.shape
+    h, w = img1.shape
     h2, w2 = img2.shape
     
-    # Align img2 to match img1
+
     img1_aligned = cv.warpPerspective(img1, M, (w2, h2))
 
     pts = np.float32([[0, 0], [0, h-1], [w-1, h-1], [w-1, 0]]).reshape(-1, 1, 2)
